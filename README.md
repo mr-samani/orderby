@@ -1,7 +1,7 @@
 # orderby-ts
 
 [![npm version](https://badge.fury.io/js/orderby-ts.svg)](https://badge.fury.io/js/orderby-ts)
-[![Build Status](https://github.com/mr-samani/orderby-ts/actions/workflows/ci.yml/badge.svg)](https://github.com/mr-samani/orderby-ts/actions)
+[![Build Status](https://github.com/mr-samani/orderby-ts/actions/workflows/ci.yaml/badge.svg)](https://github.com/mr-samani/orderby-ts/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **orderby-ts** is a lightweight, type-safe utility for sorting arrays in TypeScript. It works with arrays of numbers, strings, or objects and is designed to be framework-agnostic, making it easy to use in any TypeScript or JavaScript project.
