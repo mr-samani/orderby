@@ -10,7 +10,7 @@
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "format": "prettier --write .",
     "prepare": "husky",
-    "demo": "http-server -p 2345"
+    "demo": "http-server -p 2345 -o  /demo"
   },
   "repository": {
     "type": "git",

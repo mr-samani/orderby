@@ -1,8 +1,12 @@
-export {}; // برای تبدیل فایل به ماژول ESM
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+export {}; //for convert file to module ESM
 
 declare global {
   interface Array<T> {
-    orderBy(selector: (item: T) => any | ((item: T) => any)[], order?: 'ASC' | 'DESC'): T[];
+    orderBy(
+      selector: (item: T) => any | ((item: T) => any)[],
+      order?: 'ASC' | 'DESC'
+    ): T[];
   }
 }
 
@@ -10,7 +14,14 @@ Array.prototype.orderBy = function <T>(
   selector: ((item: T) => any) | ((item: T) => any)[],
   order: 'ASC' | 'DESC' = 'ASC'
 ) {
-  const compare = (a: T, b: T, selector: (item: T) => any, order: 'ASC' | 'DESC') => {
+  //should not mutate the original array
+  const copiedArray = [...this];
+  const compare = (
+    a: T,
+    b: T,
+    selector: (item: T) => any,
+    order: 'ASC' | 'DESC'
+  ) => {
     const aValue = selector(a);
     const bValue = selector(b);
 
@@ -22,9 +33,9 @@ Array.prototype.orderBy = function <T>(
     return 0;
   };
 
-  // بررسی اینکه آیا selector یک آرایه است یا نه
+  //check selector is array
   if (Array.isArray(selector)) {
-    return this.sort((a: T, b: T) => {
+    return copiedArray.sort((a: T, b: T) => {
       for (let i = 0; i < selector.length; i++) {
         const selectorFn = selector[i];
         const orderValue = Array.isArray(order) ? order[i] : 'ASC';
@@ -36,7 +47,7 @@ Array.prototype.orderBy = function <T>(
       return 0;
     });
   } else {
-    // حالت تک‌فیلدی
-    return this.sort((a: T, b: T) => compare(a, b, selector, order));
+    // for single field
+    return copiedArray.sort((a: T, b: T) => compare(a, b, selector, order));
   }
 };

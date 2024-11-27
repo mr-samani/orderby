@@ -6,23 +6,63 @@ body {
 }
 .container {
   max-width: 1200px;
-  margin: 10px auto;
+  margin: 0px auto;
   height: calc(100vh - 20px);
 }
 
 .container .inner {
   display: flex;
+  height: calc(100% - 100px);
+  gap: 5px;
 }
-
+nav ul {
+  padding: 0px 40px;
+  margin: 0;
+  background: #3a5ec9;
+  color: #fff;
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px;
+  display: block;
+  color: #fff;
+}
 textarea,
 pre {
   flex: auto;
   max-height: 100%;
   overflow: auto;
+  border: 1px #193df9 solid;
+  background: #dbdbdb;
+  border-radius: 5px;
+  margin: 0;
 }
 
+.function {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
+input {
+  border: 1px #cbcbcb solid;
+  flex: auto;
+  padding: 5px;
+  border-radius: 4px;
+  outline: none;
+}
+input:active,
+input:focus {
+  border: 1px rebeccapurple solid;
+}
 
-.function{
-    height: 34px;
+.code {
+  background: #1c1d1f;
+  color: #fff;
+  padding: 8px 16px;
 }
