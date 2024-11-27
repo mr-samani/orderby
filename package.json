@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "lint": "eslint . --ext .ts",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "format": "prettier --write ."
   },
   "repository": {

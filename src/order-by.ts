@@ -5,9 +5,9 @@
  * @param ascending Whether to sort in ascending order. Default is true.
  * @returns A new array sorted by the given key/selector.
  */
-export function orderBy<T>(
+export function orderBy<T, K extends string | number | Date>(
   array: T[],
-  selector: keyof T | ((item: T) => any),
+  selector: keyof T | ((item: T) => K),
   ascending: boolean = true
 ): T[] {
   return [...array].sort((a, b) => {
