@@ -1,6 +1,6 @@
 {
   "name": "orderby-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A TypeScript utility for sorting arrays with ease",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mr-samani/orderby.git"
+    "url": "git+https://github.com/mr-samani/orderby.git"
   },
   "keywords": [
     "orderby",
