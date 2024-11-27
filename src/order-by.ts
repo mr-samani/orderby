@@ -6,17 +6,16 @@
  * @returns A new array sorted by the given key/selector.
  */
 export function orderBy<T>(
-    array: T[],
-    selector: keyof T | ((item: T) => any),
-    ascending: boolean = true
-  ): T[] {
-    return [...array].sort((a, b) => {
-      const aValue = typeof selector === "function" ? selector(a) : a[selector];
-      const bValue = typeof selector === "function" ? selector(b) : b[selector];
-  
-      if (aValue < bValue) return ascending ? -1 : 1;
-      if (aValue > bValue) return ascending ? 1 : -1;
-      return 0;
-    });
-  }
-  
+  array: T[],
+  selector: keyof T | ((item: T) => any),
+  ascending: boolean = true
+): T[] {
+  return [...array].sort((a, b) => {
+    const aValue = typeof selector === 'function' ? selector(a) : a[selector];
+    const bValue = typeof selector === 'function' ? selector(b) : b[selector];
+
+    if (aValue < bValue) return ascending ? -1 : 1;
+    if (aValue > bValue) return ascending ? 1 : -1;
+    return 0;
+  });
+}
