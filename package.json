@@ -8,7 +8,8 @@
     "build": "tsc",
     "test": "jest",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
