@@ -5,11 +5,12 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "npx webpack",
     "test": "jest",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "demo": "http-server -p 2345"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,9 @@
     "lint-staged": "^15.2.10",
     "prettier": "^3.4.1",
     "ts-jest": "^29.2.5",
-    "typescript-eslint": "^8.16.0"
+    "typescript-eslint": "^8.16.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
   },
   "husky": {
     "hooks": {
@@ -47,5 +50,10 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1"
   }
 }

@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 10px auto;
+  display: flex;
+  height: calc(100vh - 20px);
+}
+
+
+textarea,pre{
+    flex:auto;
+    max-height: 100%;
+    overflow: auto;
+}

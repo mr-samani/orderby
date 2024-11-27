@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OrderBy ts</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/png" />
   </head>
   <body>
-    <script src="../dist/order-by.js"></script>
-    <script src="./script.js"></script>
+    <div class="container">
+      <textarea name="input" id="input" rows="10"></textarea>
+      <button id="run">RUN sort</button>
+      <pre id="result"></pre>
+    </div>
+
+    <script src="../dist/bundle.js" type="module"></script>
+    <script src="./script.js" type="module"></script>
   </body>
 </html>
