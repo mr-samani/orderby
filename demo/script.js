@@ -1,5 +1,6 @@
 var input = document.querySelector('textarea#input');
 var result = document.querySelector('pre#result');
+var sortFunction = document.querySelector('input#sort-function');
 var users = [
   { name: 'ali' },
   { name: 'kamran' },
@@ -18,13 +19,15 @@ var users = [
 
 function init() {
   input.value = JSON.stringify(users, '', 4);
+  sortFunction.value = '(o) => o.name';
   document.querySelector('button#run').addEventListener('click', sort);
 }
 
 function sort() {
   result.innerHTML = '';
   let list = JSON.parse(input.value);
-  var sorted = list.orderBy((o) => o.name);
+  var f = new Function(`return ${sortFunction.value};`);
+  var sorted = list.orderBy(f());
   console.log(sorted);
   result.innerHTML = JSON.stringify(sorted, '', 4);
 }
