@@ -1,4 +1,3 @@
-
 # orderby-ts
 
 [![npm version](https://badge.fury.io/js/orderby-ts.svg)](https://badge.fury.io/js/orderby-ts)
@@ -38,11 +37,13 @@ yarn add orderby-ts
 ## 🛠️ Usage
 
 ### Importing the Function
+
 ```typescript
 import { orderby-ts } from 'orderby-ts';
 ```
 
 ### Sorting Arrays of Numbers
+
 ```typescript
 const numbers = [5, 3, 8, 1];
 const sortedNumbers = orderBy(numbers, (num) => num);
@@ -50,6 +51,7 @@ console.log(sortedNumbers); // Output: [1, 3, 5, 8]
 ```
 
 ### Sorting Arrays of Objects by Key
+
 ```typescript
 const users = [
   { id: 1, name: 'Alice', age: 30 },
@@ -75,6 +77,7 @@ console.log(sortedByAgeDesc);
 ```
 
 ### Sorting with a Custom Selector Function
+
 ```typescript
 const sortedByNameLength = orderBy(users, (user) => user.name.length);
 console.log(sortedByNameLength);
@@ -86,6 +89,7 @@ console.log(sortedByNameLength);
 ```
 
 ### Handling Empty Arrays
+
 ```typescript
 const emptyArray = [];
 const sorted = orderBy(emptyArray, (item) => item);
@@ -99,11 +103,13 @@ console.log(sorted); // Output: []
 ### `orderBy<T>(array: T[], selector: keyof T | (item: T) => any, ascending: boolean = true): T[]`
 
 #### Parameters:
+
 - **`array`**: The array to be sorted.
 - **`selector`**: A key or a custom selector function to define the sorting logic.
 - **`ascending`** (optional): Boolean indicating whether to sort in ascending order. Default is `true`.
 
 #### Returns:
+
 - A new, sorted array.
 
 ---
@@ -122,15 +128,18 @@ npm test
 ## 💻 Development
 
 ### Requirements
+
 - Node.js (>= 14)
 - TypeScript (>= 4.0)
 
 ### Building the Project
+
 ```bash
 npm run build
 ```
 
 ### Linting and Formatting
+
 This project uses **ESLint** and **Prettier** for linting and code formatting:
 
 ```bash
@@ -144,6 +153,7 @@ npm run format   # Format the code with Prettier
 ## 🤝 Contributing
 
 Contributions are welcome! To contribute:
+
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature/my-feature`).
 3. Commit your changes (`git commit -am 'Add my feature'`).
@@ -170,4 +180,7 @@ If you like this project, give it a star ⭐ on GitHub!
 
 - [GitHub Repository](https://github.com/mr-samani/orderby-ts)
 - [npm Package](https://www.npmjs.com/package/orderby-ts)
+
+```
+
 ```
