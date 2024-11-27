@@ -1,11 +1,11 @@
 
-# orderby
+# orderby-ts
 
-[![npm version](https://badge.fury.io/js/orderby.svg)](https://badge.fury.io/js/orderby)
-[![Build Status](https://github.com/mr-samani/orderby/workflows/Build/badge.svg)](https://github.com/mr-samani/orderby/actions)
+[![npm version](https://badge.fury.io/js/orderby-ts.svg)](https://badge.fury.io/js/orderby-ts)
+[![Build Status](https://github.com/mr-samani/orderby-ts/workflows/Build/badge.svg)](https://github.com/mr-samani/orderby-ts/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**orderby** is a lightweight, type-safe utility for sorting arrays in TypeScript. It works with arrays of numbers, strings, or objects and is designed to be framework-agnostic, making it easy to use in any TypeScript or JavaScript project.
+**orderby-ts** is a lightweight, type-safe utility for sorting arrays in TypeScript. It works with arrays of numbers, strings, or objects and is designed to be framework-agnostic, making it easy to use in any TypeScript or JavaScript project.
 
 ---
 
@@ -21,16 +21,16 @@
 
 ## 📦 Installation
 
-You can install `orderby` using npm or yarn:
+You can install `orderby-ts` using npm or yarn:
 
 ```bash
-npm install orderby
+npm install orderby-ts
 ```
 
 Or with Yarn:
 
 ```bash
-yarn add orderby
+yarn add orderby-ts
 ```
 
 ---
@@ -39,7 +39,7 @@ yarn add orderby
 
 ### Importing the Function
 ```typescript
-import { orderBy } from 'orderby';
+import { orderby-ts } from 'orderby-ts';
 ```
 
 ### Sorting Arrays of Numbers
@@ -168,6 +168,6 @@ If you like this project, give it a star ⭐ on GitHub!
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/mr-samani/orderby)
-- [npm Package](https://www.npmjs.com/package/orderby)
+- [GitHub Repository](https://github.com/mr-samani/orderby-ts)
+- [npm Package](https://www.npmjs.com/package/orderby-ts)
 ```
