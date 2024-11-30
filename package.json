@@ -1,9 +1,9 @@
 {
   "name": "orderby-ts",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "A TypeScript utility for sorting arrays with ease",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/order-by.extension.d.ts",
   "scripts": {
     "build": "npx webpack",
     "test": "jest",
@@ -11,7 +11,9 @@
     "format": "prettier --write .",
     "format-check": "npx prettier --check .",
     "prepare": "husky",
-    "demo": "http-server -p 2345 -o  /demo"
+    "demo": "http-server -p 2345 -o  /demo",
+    "publish": "npm publish",
+    "test-pack": "npm pack"
   },
   "repository": {
     "type": "git",
