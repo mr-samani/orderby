@@ -9,6 +9,7 @@
     "test": "jest",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "format": "prettier --write .",
+    "format-check": "npx prettier --check .",
     "prepare": "husky",
     "demo": "http-server -p 2345 -o  /demo"
   },

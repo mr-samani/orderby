@@ -76,7 +76,6 @@ console.log(sortedByAgeDesc);
 // ];
 ```
 
-
 ### Handling Empty Arrays
 
 ```typescript
