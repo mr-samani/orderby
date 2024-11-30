@@ -1,7 +1,7 @@
 # orderby-ts
 
 [![npm version](https://badge.fury.io/js/orderby-ts.svg)](https://badge.fury.io/js/orderby-ts)
-[![Build Status](https://github.com/mr-samani/orderby-ts/workflows/Build/badge.svg)](https://github.com/mr-samani/orderby-ts/actions)
+[![Build Status](https://github.com/mr-samani/orderby-ts/actions/workflows/ci.yaml/badge.svg)](https://github.com/mr-samani/orderby-ts/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **orderby-ts** is a lightweight, type-safe utility for sorting arrays in TypeScript. It works with arrays of numbers, strings, or objects and is designed to be framework-agnostic, making it easy to use in any TypeScript or JavaScript project.
@@ -39,18 +39,18 @@ yarn add orderby-ts
 ### Importing the Function
 
 ```typescript
-import { orderby-ts } from 'orderby-ts';
+import 'orderby-ts';
 ```
 
 ### Sorting Arrays of Numbers
 
 ```typescript
 const numbers = [5, 3, 8, 1];
-const sortedNumbers = orderBy(numbers, (num) => num);
+const sortedNumbers = numbers.orderBy((num) => num);
 console.log(sortedNumbers); // Output: [1, 3, 5, 8]
 ```
 
-### Sorting Arrays of Objects by Key
+### Sorting Arrays of Custom Selector Function
 
 ```typescript
 const users = [
@@ -59,7 +59,7 @@ const users = [
   { id: 3, name: 'Charlie', age: 35 },
 ];
 
-const sortedByName = orderBy(users, 'name');
+const sortedByName = users.orderBy((o) => o.name);
 console.log(sortedByName);
 // Output: [
 //   { id: 1, name: 'Alice', age: 30 },
@@ -67,7 +67,7 @@ console.log(sortedByName);
 //   { id: 3, name: 'Charlie', age: 35 }
 // ];
 
-const sortedByAgeDesc = orderBy(users, 'age', false);
+const sortedByAgeDesc = users.orderBy((o) => o.age, 'DESC');
 console.log(sortedByAgeDesc);
 // Output: [
 //   { id: 3, name: 'Charlie', age: 35 },
@@ -76,23 +76,11 @@ console.log(sortedByAgeDesc);
 // ];
 ```
 
-### Sorting with a Custom Selector Function
-
-```typescript
-const sortedByNameLength = orderBy(users, (user) => user.name.length);
-console.log(sortedByNameLength);
-// Output: [
-//   { id: 2, name: 'Bob', age: 25 },
-//   { id: 1, name: 'Alice', age: 30 },
-//   { id: 3, name: 'Charlie', age: 35 }
-// ];
-```
-
 ### Handling Empty Arrays
 
 ```typescript
 const emptyArray = [];
-const sorted = orderBy(emptyArray, (item) => item);
+const sorted = emptyArray.orderBy((item) => item);
 console.log(sorted); // Output: []
 ```
 
@@ -100,13 +88,13 @@ console.log(sorted); // Output: []
 
 ## 🔍 API
 
-### `orderBy<T>(array: T[], selector: keyof T | (item: T) => any, ascending: boolean = true): T[]`
+### `orderBy<T>(array: T[], selector: keyof T | (item: T) => any, order?: 'ASC' | 'DESC'): T[]`
 
 #### Parameters:
 
 - **`array`**: The array to be sorted.
 - **`selector`**: A key or a custom selector function to define the sorting logic.
-- **`ascending`** (optional): Boolean indicating whether to sort in ascending order. Default is `true`.
+- **`order`** (optional): indicating whether to sort in ascending order. Default is `ASC`.
 
 #### Returns:
 
@@ -180,7 +168,3 @@ If you like this project, give it a star ⭐ on GitHub!
 
 - [GitHub Repository](https://github.com/mr-samani/orderby-ts)
 - [npm Package](https://www.npmjs.com/package/orderby-ts)
-
-```
-
-```
