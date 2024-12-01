@@ -1,6 +1,7 @@
 # orderby-ts
 
 [![npm version](https://badge.fury.io/js/orderby-ts.svg)](https://badge.fury.io/js/orderby-ts)
+[![install size](https://packagephobia.com/badge?p=orderby-ts@2.0.1)](https://packagephobia.com/result?p=orderby-ts@2.0.1)
 [![Build Status](https://github.com/mr-samani/orderby-ts/actions/workflows/ci.yaml/badge.svg)](https://github.com/mr-samani/orderby-ts/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
