@@ -1,6 +1,6 @@
 {
   "name": "orderby-ts",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A TypeScript utility for sorting arrays with ease",
   "main": "dist/index.js",
   "types": "dist/order-by.extension.d.ts",
@@ -41,7 +41,10 @@
     "ts-jest": "^29.2.5",
     "typescript-eslint": "^8.16.0",
     "webpack": "^5.96.1",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1"
   },
   "husky": {
     "hooks": {
@@ -54,9 +57,5 @@
       "prettier --write"
     ]
   },
-  "dependencies": {
-    "css-loader": "^7.1.2",
-    "style-loader": "^4.0.0",
-    "ts-loader": "^9.5.1"
-  }
+  "dependencies": {}
 }
